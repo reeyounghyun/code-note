@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+@import url(webfont.css);
+
+html { font-size:62.5%; }
+
+.wrap { width:100vw; height:100vh; background-image:url(/2023/review_2nd/mission_02/yunseo/images/bg_mv_mb.png); background-repeat:no-repeat; background-size:cover; }
+
+header { width:100%; height:15vw; position:fixed; z-index:100; border-bottom:1px solid #babddd; display:flex; justify-content:space-between; font-size:1.2rem; font-family:'Noto Sans KR'; letter-spacing:-0.5px; line-height:1.2; }
+
+.menu { position:absolute; z-index:1000; width:100vw; height:100vh; background-color:#000000b5; display:flex; justify-content:flex-end; transition:0.8s; opacity:0; transform: translateX(100vw); }
+.menu .menu_close { width:20%; position:relative; transition:0.8s; }
+.menu .menu_close a { position:absolute; width:10vw; height:15vw; display:inline-block; top:0; right:0; text-indent:-9999em; }
+.menu .menu_close a::before { content:''; width:1px; height:22px; background:#fff; position:absolute; top:50%; right:50%; transform:translate(-50%, -50%) rotate(45deg);}
+.menu .menu_close a::after { content:''; width:1px; height:22px; background:#fff; position:absolute; top:50%; right:50%; transform:translate(-50%, -50%) rotate(135deg);}
+.menu .menu_area { width:80%; background:#fff; transition:0.8s; }
+.menu .menu_area .menu_head { width:100%; height:15vw; border-bottom:1px solid #e6e6e6; display:flex; justify-content:space-between; align-items:center; padding:2.5vw 5vw; box-sizing:border-box; }
+.menu .menu_area .menu_head .logo { width:18vw; }
+.menu .menu_area .menu_head .logo img { width:100%; height:100%; }
+.menu .menu_area .menu_head .quick {  }
+.menu .menu_area .menu_head .quick a { color:#000; }
+.menu .menu_area .menu_list { padding:0 0 0 5vw; }
+.menu .menu_area .menu_list>ul {  }
+.menu .menu_area .menu_list>ul>li {  }
+.menu .menu_area .menu_list>ul>li>a { width:100%; font-family:'GmarketSansMedium', 'Noto Sans KR'; font-size:2rem; border-bottom:1px solid #e6e6e6; display:inline-block; margin:0 0 0 5vw; padding:5vw 5vw 5vw 0; box-sizing:border-box; position:relative; }
+.menu .menu_area .menu_list>ul>li>a::before { content:''; width:15px; height:1px; background:#000; position:absolute; top:50%; transform:translateY(-50%); right:10vw; }
+.menu .menu_area .menu_list>ul>li>a::after { content:''; width:15px; height:1px; background:#000; position:absolute; top:50%; transform:translateY(-50%) rotate(90deg); right:10vw; }
+.menu .menu_area .menu_list>ul>li.on {  }
+.menu .menu_area .menu_list>ul>li.on>a { color:#fff; background:#a64788; padding:5vw; margin:0; border-bottom:0 none; }
+.menu .menu_area .menu_list>ul>li.on>a::before { background:#fff; right:5vw; }
+.menu .menu_area .menu_list>ul>li.on>a::after { display:none; }
+.menu .menu_area .menu_list>ul>li>ul { background:#f6f9fc; padding:5vw; margin:0 0 0 5vw; display:none; }
+.menu .menu_area .menu_list>ul>li>ul>li {  }
+.menu .menu_area .menu_list>ul>li>ul>li + li { margin-top:5px; }
+.menu .menu_area .menu_list>ul>li>ul>li>a { font-size:1.6rem; }
+
+.menubtn { position:relative; width:15vw; height:15vw; }
+.menubtn a { position:relative; width:100%; height:100%; display:inline-block; }
+.menubtn a span { width:20px; height:1.5px; background:#fff; position:absolute; top:50%; left:50%; }
+.menubtn a span:nth-child(1) { transform:translate(-50%, calc(-50% - 8px)); }
+.menubtn a span:nth-child(2) { width: 15px; transform:translate(calc(-50% + 2.5px), -50%); }
+.menubtn a span:nth-child(3) { transform:translate(-50%, calc(-50% + 8px)); }
+.logo a { width:100%; height:100%; display:inline-block; padding:2vw 0; box-sizing:border-box; }
+.logo a img { width:100%; height:100%; }
+.findbtn { width:15vw; height:15vw; }
+.findbtn a { width:100%; height:100%; display:inline-block; padding:4vw; box-sizing:border-box; }
+.findbtn a img { width:100%; height:100%; }
+
+main { font-size:1.2rem; font-family:'Noto Sans KR'; letter-spacing:-0.5px; line-height:1.2; padding:25vw 5vw 0; }
+
+.main_txt {  }
+.main_txt .tit { color:#fff; font-family:'GmarketSansMedium', 'Noto Sans KR'; font-size:3.6rem; }
+.main_txt .tit::after { content:''; }
+.main_txt .tit span { color:#cfe100; font-family:'GmarketSansBold', 'Noto Sans KR'; }
+.main_txt .txt_sub01 { color:#fff; font-size:1.4rem; padding-top:8px; }
+.main_txt .txt_sub02 { color:#babddd; font-size:1.2rem; padding-top:3px; }
+.main_complaint_count { display:flex; justify-content:space-between; padding:1vw 5vw; border:1px solid #babddd; border-radius:2vw; margin:15vw 0 0; }
+.main_complaint_count .tit { color:#fff; font-weight:700; position:relative; }
+.main_complaint_count .tit::after { content:''; width:1px; height:12px; background:#babddd; position:absolute; top:50%; transform:translateY(-50%); left:8rem; }
+.main_complaint_count .count { display:flex; column-gap:5vw; }
+.main_complaint_count .count>div { color:#fff; }
+.main_complaint_count .count>div span { color:#cfe100; font-family:'GmarketSansBold', 'Noto Sans KR'; padding-left:1vw; }
+.main_report { margin:5vw 0 0; background:#fff; border-radius:2vw 2vw 0 2vw; overflow:hidden; }
+.main_report .covid19 {  }
+.main_report .covid19 ul { display:flex; }
+.main_report .covid19 ul li { width:50%; padding:4vw 4vw 0; margin:0 0 4vw; background-repeat:no-repeat; background-size:cover; position:relative; }
+.main_report .covid19 ul li:nth-child(1) { border-right:1px dotted #d6d6d6; }
+.main_report .covid19 ul li::after { content:''; width:6rem; height:6rem; border-radius:50%; background-image:url(/2023/review_2nd/mission_02/yunseo/images/ico_mvobj.png); background-size:cover; position:absolute; top:50%; transform:translateY(-50%); right:4vw; }
+.main_report .covid19 ul li:nth-child(1)::after { background-position:top; }
+.main_report .covid19 ul li:nth-child(2)::after { background-position:bottom; }
+.main_report .covid19 ul li a {  }
+.main_report .covid19 ul li a .txt01 { color:#c83697; font-size:1.1rem; font-family:'GmarketSansBold', 'Noto Sans KR'; }
+.main_report .covid19 ul li a .txt02 { color:#3c404a; font-size:1.6rem; font-family:'GmarketSansBold', 'Noto Sans KR'; margin-top:3px; }
+.main_report .call119 { background-color:#f4f8fe; text-align:center; padding:1vw 0; }
+.main_report .call119 a {  }
+.main_report .call119 a::before { content:''; background-image:url(/2023/review_2nd/mission_02/yunseo/images/ico_main_warn.png); background-repeat:no-repeat; background-size:cover; display:inline-block; width:1.2rem; height:1.2rem; margin-right:5px;}
+.main_report .call119 a span { color:#2d2f38; font-weight:700; }
+.main_report .call119 a span.red { color:#d74066; }
+
+@media all and (max-width: 414px) {
+    html { font-size: 70%; }
+}
+
+@media all and (max-width: 374px) {
+    html { font-size: 50%; }
+}

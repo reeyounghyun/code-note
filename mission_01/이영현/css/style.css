@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+.wrapper{background: url(/images/bg_mv.png); width: 100%; padding: 10px 0;}
+.contants{max-width: 1280px; margin: 0 auto;}
+
+.gnb-wrap{display: flex; align-items: center;}
+.gnb-wrap .header-logo{flex: 1 0 auto;}
+.gnb-wrap .header-logo img{max-width: 120px;}
+.gnb-wrap .gnb{flex: 1 2 auto;}
+.gnb-wrap .gnb ul{display: flex; justify-content: space-around;}
+.gnb-wrap .gnb ul li a{font-size: 18px; font-weight: 500;}
+
+.gnb-wrap .snb ul{display: flex; align-items: center;}
+
+/* 공통 스타일 */
+/* .gnb-wrap .snb ul li{}
+.gnb-wrap .snb ul li::before{content:""; display: inline-block; background-image: url(/images/ico_util_type2.png); clear: both; width: 40px; height: 20px;} */
+
+/* 이미지 스타일 */
+/* .gnb-wrap .snb ul li.snb-icon1::before{background-repeat: no-repeat; background-position: -9px 0px;} */
+
+
+
+
+.gnb-wrap .snb ul li a{font-size: 14px;}
+.gnb-wrap .snb ul li img{width: 14px; height:17px;}
