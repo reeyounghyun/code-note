@@ -5,10 +5,10 @@
 /* 전체를 묶는 클레스 */
 .wrapper{background: url(../images/bg_mv.png); height: 740px;}
 
-.gnb-wrap{display: flex; align-items: center; padding: 10px 0;}
+.gnb-wrap{display: flex; align-items: center;}
 .gnb-wrap .header-logo{flex: 1 1 20%;}
 .gnb-wrap .header-logo img{max-width: 120px;}
-.gnb-wrap .gnb{flex: 1 1 50%;}
+.gnb-wrap .gnb{flex: 1 1 50%; height: 77px; line-height: 77px;}
 .gnb-wrap .gnb ul{display: flex; justify-content: space-around;}
 .gnb-wrap .gnb ul li a{font-size: 18px; font-weight: 500;}
 .gnb-wrap .snb{flex: 1 1 30%;}
