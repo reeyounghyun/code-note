@@ -23,7 +23,7 @@
  */
 
  /* 펼처지는 메뉴 시작 */
-.all-menu{background: #f5f9fb; height: 227px; display: none; position: absolute; width: 100%; top: 90px;}
+.all-menu {background: #f5f9fb; height: 227px; display: none; position: absolute; width: 100%; top: 60px;}
 .all-menu.on{display: block}
 
 .all-menu .array{display: flex;}
