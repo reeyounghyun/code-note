@@ -3,7 +3,7 @@
 .contants{max-width: 1280px; margin: 0 auto;}
 
 /* 전체를 묶는 클레스 */
-.wrapper{background: url(/images/bg_mv.png); height: 740px;}
+.wrapper{background: url(../images/bg_mv.png); height: 740px;}
 
 .gnb-wrap{display: flex; align-items: center; padding: 10px 0;}
 .gnb-wrap .header-logo{flex: 1 1 20%;}
