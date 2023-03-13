@@ -15,13 +15,11 @@
 	<title>이영현</title>
 
 	<script>
-
-
 	$(document).ready(function () {
 		// 마우스 커서가 해당영역에 도달시 이벤트 발동
-		$(".gnb ul , .all-menu").on('mouseover', function () {
+		$(".gnb ul").on('mouseover', function () {
 			//이벤트 정의 (예시)
-			$('.all-menu').addClass('on')
+			$(".all-menu").addClass('on')
 		});
 
 		// 마우스 커서가 해당영역에 벗어날시 이벤트 발동
@@ -30,7 +28,6 @@
 			$(this).removeClass('on')
 		});
 	});
-
 	</script>
 </head>
 
