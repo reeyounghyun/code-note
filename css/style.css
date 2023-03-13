@@ -5,7 +5,7 @@
 /* 전체를 묶는 클레스 */
 .wrapper{background: url(../images/bg_mv.png); height: 740px;}
 
-.gnb-wrap{display: flex; align-items: center; height: 77px; line-height: 77px;}
+.gnb-wrap{display: flex; align-items: center; height: 77px; line-height: 77px;  padding-top: 30px;}
 .gnb-wrap .header-logo{flex: 1 1 20%;}
 .gnb-wrap .header-logo img{max-width: 120px;}
 .gnb-wrap .gnb{flex: 1 1 50%; }
@@ -23,7 +23,7 @@
  */
 
  /* 펼처지는 메뉴 시작 */
-.all-menu {background: #f5f9fb; height: 227px; display: none; position: absolute; width: 100%; top: 60px;}
+.all-menu {background: #f5f9fb; height: 227px; display: none; position: absolute; width: 100%; top: 96px;}
 .all-menu.on{display: block}
 
 .all-menu .array{display: flex;}
