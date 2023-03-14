@@ -2,10 +2,13 @@
 /* 공통 css */
 .contants{max-width: 1280px; margin: 0 auto;}
 
+/* skip */
+#skip:focus {width: 100%; background: #000; font-size: 18px; text-align: center; padding: 5px 0;}
+
 /* 전체를 묶는 클레스 */
 .wrapper{background: url(../images/bg_mv.png); height: 740px;}
 
-.gnb-wrap{display: flex; align-items: center; height: 77px; line-height: 77px;  padding-top: 30px;}
+.gnb-wrap{display: flex; align-items: center; height: 77px; padding-top: 30px;}
 .gnb-wrap .header-logo{flex: 1 1 20%;}
 .gnb-wrap .header-logo img{max-width: 120px;}
 .gnb-wrap .gnb{flex: 1 1 50%; }
@@ -23,16 +26,17 @@
  */
 
  /* 펼처지는 메뉴 시작 */
-.all-menu {background: #f5f9fb; height: 227px; display: none; position: absolute; width: 100%; top: 96px;}
+.all-menu {background: #f5f9fb; height: 227px; position: absolute; width: 100%; top: 106px; left: 0; z-index: 100; display: none; }
 .all-menu.on{display: block}
 
 .all-menu .array{display: flex;}
 .all-menu .menu-tit{background: url(../images/bg_gnb_twodep.png) no-repeat; width:276px; height: 227px; background-size: cover;}
+.all-menu .menu-tit .menu-cont strong{color: #fff; font-size: 28px;}
 .all-menu .menu-tit .menu-cont{padding:30px}
 .all-menu .menu-tit .menu-cont h2{font-size: 25px; padding-bottom: 5px; color: #fff;}
 .all-menu .menu-tit .menu-cont p{font-size: 17px; color: #efefef;}
-.all-menu .menu-list{ overflow: hidden; display: flex; flex: 1; padding-top: 37px;}
-.all-menu .menu-list ul{padding-left: 40px; position: relative; flex: 1;}
+.all-menu .menu-list{ overflow: hidden; display: flex; flex: 1; padding: 30px;}
+.all-menu .menu-list ul{padding-left: 40px; position: relative; flex: 1; flex-direction: column; justify-content: flex-start;}
 /* .all-menu .menu-list ul + ul::after{content:""; position: absolute; left: 0; top: 0; height: 100px; border: 1px solid #191a1a;} */
 .all-menu .menu-list ul li{list-style: disc; padding-bottom: 7px;}
 .all-menu .menu-list a{color: #323232; font-size: 17px;}

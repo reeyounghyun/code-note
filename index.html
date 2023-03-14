@@ -15,26 +15,36 @@
 	<title>이영현</title>
 
 	<script>
-	$(document).ready(function () {
-		// 마우스 커서가 해당영역에 도달시 이벤트 발동
-		$(".gnb ul").on('mouseover', function () {
-			//이벤트 정의 (예시)
-			$(".all-menu").addClass('on')
-		});
+		$(document).ready(function () {
+			// 마우스 커서가 해당영역에 도달시 이벤트 발동
+			$(".gnb ul").on('mouseover', function () {
+				//이벤트 정의 (예시)
+				$(".all-menu").addClass('on')
+			});
 
-		// 마우스 커서가 해당영역에 벗어날시 이벤트 발동
-		$(".gnb, .all-menu").on('mouseout', function () {
-			//이벤트 정의 (예시)
-			$(this).removeClass('on')
+			// 마우스 커서가 해당영역에 벗어날시 이벤트 발동
+			$(".gnb, .all-menu").on('mouseout', function () {
+				//이벤트 정의 (예시)
+				$(this).removeClass('on')
+			});
+
+			$(".gnb > ul > li:eq(0) a:eq(0)").on("focus", function () {
+				//gnb의 첫 번째 대메뉴 링크에 focus 이벤트 지정, 더 간결한 셀렉트 권장
+				//이벤트 정의 (예시)
+				$(this).next(".all-menu").addClass("on");
+			});
+			//blur
+
+
 		});
-	});
 	</script>
 </head>
 
 <body>
+	<div id="skip" tabindex="1"><a href="#cont-comm">본문바로가기</a></div>
 	<header>
-		<div class="wrapper">
-			<div class="contants" style="position: relative;">
+		<div class="wrapper" style="position: relative;">
+			<div class="wrap_inner  contants">
 				<div class="gnb-wrap">
 					<h1 class="header-logo">
 						<a href="#" title="응답소 로고">
@@ -43,11 +53,250 @@
 					</h1>
 					<nav class="gnb">
 						<ul>
-							<li><a href="#" title="민원신청"><span>민원신청</span></a></li>
-							<li><a href="#" title="민원결과"><span>민원결과</span></a></li>
-							<li><a href="#" title="민원사례"><span>민원사례</span></a></li>
-							<li><a href="#" title="정보"><span>정보</span></a></li>
-							<li><a href="#" title="고객소통센터"><span>고객소통센터</span></a></li>
+							<li>
+								<!-- ul 태그 삭제 *비표준 -->
+								<a href="#"><span>민원신청</span></a>
+								<!-- a 태그에 민원신청 텍스트가 있으므로 중복되는 title="민원신청"은 불필요함 -->
+
+								<!-- 펼처지는 메뉴 시작 -->
+								<div class="all-menu">
+									<div class="contants array">
+										<div class="menu-tit">
+											<div class="menu-cont">
+												<strong>민원신청</strong>
+												<p>
+													생활 속 불편사항 신고,
+													<br />
+													각정 건의 및 질의 등을 위한
+													<br />
+													청구입니다.
+												</p>
+											</div>
+										</div>
+										<div class="menu-list">
+											<ul>
+												<li><a href="#">시정일반 건의 · 질의</a></li>
+												<li><a href="#">코로나19방역수칙 위반 신고</a></li>
+												<li><a href="#">코로나19백신접종 신고</a></li>
+												<li><a href="#">시장에게 바란다</a></li>
+												<li><a href="#">서울시 비리신고</a></li>
+											</ul>
+											<ul>
+												<li><a href="#">투자출연기관비리신고</a></li>
+												<li><a href="#">하도급 부조리 신고</a></li>
+												<li><a href="#">인권침해 구제신청</a></li>
+												<li><a href="#">민생침해신고(눈물그만)</a></li>
+												<li><a href="#">노동조사신고</a></li>
+											</ul>
+											<ul>
+												<li><a href="#">지방세 이의신청</a></li>
+												<li><a href="#">성평등 노동조사신고</a></li>
+												<li class="list-icon-img">
+													<a href="#" blur="2">공직비리 익명신고  <img src="./images/ico_textlink.png" alt="공적비리 익명신고"></a>
+												</li>
+
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- 펼처지는 메뉴 끝 -->
+							</li>
+							<li>
+								<a href="#" title="민원결과"><span>민원결과</span></a>
+								<!-- 펼처지는 메뉴 시작 -->
+								<div class="all-menu">
+									<div class="contants array">
+										<div class="menu-tit">
+											<div class="menu-cont">
+												<strong>민원결과</strong>
+												<!-- 서브 메뉴의 설명 문구에 h3 태그 사용이 적절한 고민이 필요함 -->
+												<!-- 제목 태그 제공이 부적절하면 오히려 문서 탐색에 혼란을 줌 -->
+												<p>
+													생활 속 불편사항 신고,
+													<br />
+													각정 건의 및 질의 등을 위한
+													<br />
+													청구입니다.
+												</p>
+											</div>
+										</div>
+										<div class="menu-list">
+											<ul>
+												<li><a href="#">시정일반 건의 · 질의</a></li>
+												<li><a href="#">코로나19방역수칙 위반 신고</a></li>
+												<li><a href="#">코로나19백신접종 신고</a></li>
+												<li><a href="#">시장에게 바란다</a></li>
+												<li><a href="#">서울시 비리신고</a></li>
+											</ul>
+											<ul>
+												<li><a href="#">투자출연기관비리신고</a></li>
+												<li><a href="#">하도급 부조리 신고</a></li>
+												<li><a href="#">인권침해 구제신청</a></li>
+												<li><a href="#">민생침해신고(눈물그만)</a></li>
+												<li><a href="#">노동조사신고</a></li>
+											</ul>
+											<ul>
+												<li><a href="#">지방세 이의신청</a></li>
+												<li><a href="#">성평등 노동조사신고</a></li>
+												<li class="list-icon-img">
+													<a href="#">
+														공직비리 익명신고
+														<img src="./images/ico_textlink.png" alt="공적비리 익명신고" />
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- 펼처지는 메뉴 끝 -->
+							</li>
+							<li>
+								<a href="#" title="민원사례"><span>민원사례</span></a>
+								<!-- 펼처지는 메뉴 시작 -->
+								<div class="all-menu">
+									<div class="contants array">
+										<div class="menu-tit">
+											<div class="menu-cont">
+												<strong>민원사례</strong>
+												<!-- 서브 메뉴의 설명 문구에 h3 태그 사용이 적절한 고민이 필요함 -->
+												<!-- 제목 태그 제공이 부적절하면 오히려 문서 탐색에 혼란을 줌 -->
+												<p>
+													생활 속 불편사항 신고,
+													<br />
+													각정 건의 및 질의 등을 위한
+													<br />
+													청구입니다.
+												</p>
+											</div>
+										</div>
+										<div class="menu-list">
+											<ul>
+												<li><a href="#">시정일반 건의 · 질의</a></li>
+												<li><a href="#">코로나19방역수칙 위반 신고</a></li>
+												<li><a href="#">코로나19백신접종 신고</a></li>
+												<li><a href="#">시장에게 바란다</a></li>
+												<li><a href="#">서울시 비리신고</a></li>
+											</ul>
+											<ul>
+												<li><a href="#">투자출연기관비리신고</a></li>
+												<li><a href="#">하도급 부조리 신고</a></li>
+												<li><a href="#">인권침해 구제신청</a></li>
+												<li><a href="#">민생침해신고(눈물그만)</a></li>
+												<li><a href="#">노동조사신고</a></li>
+											</ul>
+											<ul>
+												<li><a href="#">지방세 이의신청</a></li>
+												<li><a href="#">성평등 노동조사신고</a></li>
+												<li class="list-icon-img">
+													<a href="#">
+														공직비리 익명신고
+														<img src="./images/ico_textlink.png" alt="공적비리 익명신고" />
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- 펼처지는 메뉴 끝 -->
+							</li>
+							<li>
+								<a href="#" title="정보"><span>정보</span></a>
+								<!-- 펼처지는 메뉴 시작 -->
+								<div class="all-menu">
+									<div class="contants array">
+										<div class="menu-tit">
+											<div class="menu-cont">
+												<strong>정보</strong>
+												<!-- 서브 메뉴의 설명 문구에 h3 태그 사용이 적절한 고민이 필요함 -->
+												<!-- 제목 태그 제공이 부적절하면 오히려 문서 탐색에 혼란을 줌 -->
+												<p>
+													생활 속 불편사항 신고,
+													<br />
+													각정 건의 및 질의 등을 위한
+													<br />
+													청구입니다.
+												</p>
+											</div>
+										</div>
+										<div class="menu-list">
+											<ul>
+												<li><a href="#">시정일반 건의 · 질의</a></li>
+												<li><a href="#">코로나19방역수칙 위반 신고</a></li>
+												<li><a href="#">코로나19백신접종 신고</a></li>
+												<li><a href="#">시장에게 바란다</a></li>
+												<li><a href="#">서울시 비리신고</a></li>
+											</ul>
+											<ul>
+												<li><a href="#">투자출연기관비리신고</a></li>
+												<li><a href="#">하도급 부조리 신고</a></li>
+												<li><a href="#">인권침해 구제신청</a></li>
+												<li><a href="#">민생침해신고(눈물그만)</a></li>
+												<li><a href="#">노동조사신고</a></li>
+											</ul>
+											<ul>
+												<li><a href="#">지방세 이의신청</a></li>
+												<li><a href="#">성평등 노동조사신고</a></li>
+												<li class="list-icon-img">
+													<a href="#">
+														공직비리 익명신고
+														<img src="./images/ico_textlink.png" alt="공적비리 익명신고" />
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- 펼처지는 메뉴 끝 -->
+							</li>
+							<li>
+								<a href="#" title="고객소통센터"><span>고객소통센터</span></a>
+								<!-- 펼처지는 메뉴 시작 -->
+								<div class="all-menu">
+									<div class="contants array">
+										<div class="menu-tit">
+											<div class="menu-cont">
+												<strong>고객소통센터</strong>
+												<!-- 서브 메뉴의 설명 문구에 h3 태그 사용이 적절한 고민이 필요함 -->
+												<!-- 제목 태그 제공이 부적절하면 오히려 문서 탐색에 혼란을 줌 -->
+												<p>
+													생활 속 불편사항 신고,
+													<br />
+													각정 건의 및 질의 등을 위한
+													<br />
+													청구입니다.
+												</p>
+											</div>
+										</div>
+										<div class="menu-list">
+											<ul>
+												<li><a href="#">시정일반 건의 · 질의</a></li>
+												<li><a href="#">코로나19방역수칙 위반 신고</a></li>
+												<li><a href="#">코로나19백신접종 신고</a></li>
+												<li><a href="#">시장에게 바란다</a></li>
+												<li><a href="#">서울시 비리신고</a></li>
+											</ul>
+											<ul>
+												<li><a href="#">투자출연기관비리신고</a></li>
+												<li><a href="#">하도급 부조리 신고</a></li>
+												<li><a href="#">인권침해 구제신청</a></li>
+												<li><a href="#">민생침해신고(눈물그만)</a></li>
+												<li><a href="#">노동조사신고</a></li>
+											</ul>
+											<ul>
+												<li><a href="#">지방세 이의신청</a></li>
+												<li><a href="#">성평등 노동조사신고</a></li>
+												<li class="list-icon-img">
+													<a href="#">
+														공직비리 익명신고
+														<img src="./images/ico_textlink.png" alt="공적비리 익명신고" />
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- 펼처지는 메뉴 끝 -->
+							</li>
 						</ul>
 					</nav>
 					<div class="snb">
@@ -67,7 +316,6 @@
 							<li>
 								<button type="button">
 									<img src="./images/ico_topsearch_type2.png" alt="검색" title="검색버튼">
-
 								</button>
 							</li>
 						</ul>
@@ -75,8 +323,9 @@
 				</div>
 			</div>
 
-			<div class="contants">
-				<div class="cont-comm">
+			<!-- s:contants -->
+			<div class="contants ">
+				<div class="cont-comm" id="cont-comm">
 					<div class="cont-wrap">
 						<div class="cont-area">
 							<h2> 서울 <span>시민의 소리</span> <br /> 다 <i>&#45;</i> 듣겠습니다</h2>
@@ -118,44 +367,7 @@
 					</div>
 				</div>
 			</div>
-
-			<!-- 펼처지는 메뉴 시작 -->
-			<div class="all-menu">
-				<div class="contants array">
-					<div class="menu-tit">
-						<div class="menu-cont">
-							<h3>민원신청</h3>
-							<p>생활 속 불편사항 신고, <br /> 각정 건의 및 질의 등을 위한 <br /> 청구입니다.</p>
-						</div>
-					</div>
-					<div class="menu-list">
-						<ul>
-							<li><a href="#">시정일반 건의 &middot; 질의</a></li>
-							<li><a href="#">코로나19방역수칙 위반 신고</a></li>
-							<li><a href="#">코로나19백신접종 신고</a></li>
-							<li><a href="#">시장에게 바란다</a></li>
-							<li><a href="#">서울시 비리신고</a></li>
-						</ul>
-						<ul>
-							<li><a href="#">투자출연기관비리신고</a></li>
-							<li><a href="#">하도급 부조리 신고</a></li>
-							<li><a href="#">인권침해 구제신청</a></li>
-							<li><a href="#">민생침해신고(눈물그만)</a></li>
-							<li><a href="#">노동조사신고</a></li>
-						</ul>
-						<ul>
-							<li><a href="#">지방세 이의신청</a></li>
-							<li><a href="#">성평등 노동조사신고</a></li>
-							<li class="list-icon-img">
-								<a href="#">공직비리 익명신고
-									<img src="./images/ico_textlink.png" alt="공적비리 익명신고">
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- 펼처지는 메뉴 끝 -->
+			<!-- e:contants -->
 		</div>
 	</header>
 </body>
