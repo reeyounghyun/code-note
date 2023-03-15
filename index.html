@@ -7,38 +7,18 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description"
 		content="천만 서울시민의 의견을 접수받는 온라인 민원신청 창구입니다. 민원신청 종류는 생활불편, 건의, 질의 민원과 더불어 인권침해, 민생침해 등 다양한 시민의 소리를 접수하고 처리합니다.">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link href="./css/reset.css" rel="stylesheet">
 	<link href="./css/style.css" rel="stylesheet">
+	<script src="./js/header.js" defer></script>
+
 	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
-	<title>이영현</title>
 
-	<script>
-		$(document).ready(function () {
-			// 마우스 커서가 해당영역에 도달시 이벤트 발동
-			$(".gnb ul").on('mouseover', function () {
-				//이벤트 정의 (예시)
-				$(".all-menu").addClass('on')
-			});
-
-			// 마우스 커서가 해당영역에 벗어날시 이벤트 발동
-			$(".gnb, .all-menu").on('mouseout', function () {
-				//이벤트 정의 (예시)
-				$(this).removeClass('on')
-			});
-
-			$(".gnb > ul > li:eq(0) a:eq(0)").on("focus", function () {
-				//gnb의 첫 번째 대메뉴 링크에 focus 이벤트 지정, 더 간결한 셀렉트 권장
-				//이벤트 정의 (예시)
-				$(this).next(".all-menu").addClass("on");
-			});
-		});
-	</script>
+	<title>서울 응답소</title>
 </head>
 
 <body>
-	<div id="skip" tabindex="1"><a href="#cont-comm">본문바로가기</a></div>
 	<header>
 		<div class="wrapper" style="position: relative;">
 			<div class="wrap_inner  contants">
@@ -51,10 +31,7 @@
 					<nav class="gnb">
 						<ul>
 							<li>
-								<!-- ul 태그 삭제 *비표준 -->
 								<a href="#"><span>민원신청</span></a>
-								<!-- a 태그에 민원신청 텍스트가 있으므로 중복되는 title="민원신청"은 불필요함 -->
-
 								<!-- 펼처지는 메뉴 시작 -->
 								<div class="all-menu">
 									<div class="contants array">
@@ -63,9 +40,9 @@
 												<strong>민원신청</strong>
 												<p>
 													생활 속 불편사항 신고,
-													<br />
+													<br>
 													각정 건의 및 질의 등을 위한
-													<br />
+													<br>
 													청구입니다.
 												</p>
 											</div>
@@ -88,10 +65,7 @@
 											<ul>
 												<li><a href="#">지방세 이의신청</a></li>
 												<li><a href="#">성평등 노동조사신고</a></li>
-												<li class="list-icon-img">
-													<a href="#" blur="2">공직비리 익명신고  <img src="./images/ico_textlink.png" alt="공적비리 익명신고"></a>
-												</li>
-
+												<li class="list-icon-img"><a href="#">공직비리 익명신고 <img src="./images/ico_textlink.png"alt="공적비리 익명신고"></a></li>
 											</ul>
 										</div>
 									</div>
@@ -110,37 +84,23 @@
 												<!-- 제목 태그 제공이 부적절하면 오히려 문서 탐색에 혼란을 줌 -->
 												<p>
 													생활 속 불편사항 신고,
-													<br />
+													<br>
 													각정 건의 및 질의 등을 위한
-													<br />
+													<br>
 													청구입니다.
 												</p>
 											</div>
 										</div>
 										<div class="menu-list">
 											<ul>
-												<li><a href="#">시정일반 건의 · 질의</a></li>
-												<li><a href="#">코로나19방역수칙 위반 신고</a></li>
-												<li><a href="#">코로나19백신접종 신고</a></li>
-												<li><a href="#">시장에게 바란다</a></li>
-												<li><a href="#">서울시 비리신고</a></li>
+												<li><a href="#">응답소 민원결과</a></li>
+												<li><a href="#">120 민원결과</a></li>
+												<li><a href="#">SNS 민원결과</a></li>
+												<li><a href="#">방문ㆍ서신ㆍ유선 민원결과</a></li>
+												<li><a href="#">국민신문고 민원결과</a></li>
 											</ul>
 											<ul>
-												<li><a href="#">투자출연기관비리신고</a></li>
-												<li><a href="#">하도급 부조리 신고</a></li>
-												<li><a href="#">인권침해 구제신청</a></li>
-												<li><a href="#">민생침해신고(눈물그만)</a></li>
-												<li><a href="#">노동조사신고</a></li>
-											</ul>
-											<ul>
-												<li><a href="#">지방세 이의신청</a></li>
-												<li><a href="#">성평등 노동조사신고</a></li>
-												<li class="list-icon-img">
-													<a href="#">
-														공직비리 익명신고
-														<img src="./images/ico_textlink.png" alt="공적비리 익명신고" />
-													</a>
-												</li>
+												<li><a href="#">방문 신청한 서식민원 조회</a></li>
 											</ul>
 										</div>
 									</div>
@@ -159,37 +119,18 @@
 												<!-- 제목 태그 제공이 부적절하면 오히려 문서 탐색에 혼란을 줌 -->
 												<p>
 													생활 속 불편사항 신고,
-													<br />
+													<br>
 													각정 건의 및 질의 등을 위한
-													<br />
+													<br>
 													청구입니다.
 												</p>
 											</div>
 										</div>
 										<div class="menu-list">
 											<ul>
-												<li><a href="#">시정일반 건의 · 질의</a></li>
-												<li><a href="#">코로나19방역수칙 위반 신고</a></li>
-												<li><a href="#">코로나19백신접종 신고</a></li>
-												<li><a href="#">시장에게 바란다</a></li>
-												<li><a href="#">서울시 비리신고</a></li>
-											</ul>
-											<ul>
-												<li><a href="#">투자출연기관비리신고</a></li>
-												<li><a href="#">하도급 부조리 신고</a></li>
-												<li><a href="#">인권침해 구제신청</a></li>
-												<li><a href="#">민생침해신고(눈물그만)</a></li>
-												<li><a href="#">노동조사신고</a></li>
-											</ul>
-											<ul>
-												<li><a href="#">지방세 이의신청</a></li>
-												<li><a href="#">성평등 노동조사신고</a></li>
-												<li class="list-icon-img">
-													<a href="#">
-														공직비리 익명신고
-														<img src="./images/ico_textlink.png" alt="공적비리 익명신고" />
-													</a>
-												</li>
+												<li><a href="#">자주 찾는 민원사례</a></li>
+												<li><a href="#">민원 공개사례</a></li>
+												<li><a href="#">민원서비스 우수사례</a></li>
 											</ul>
 										</div>
 									</div>
@@ -208,37 +149,20 @@
 												<!-- 제목 태그 제공이 부적절하면 오히려 문서 탐색에 혼란을 줌 -->
 												<p>
 													생활 속 불편사항 신고,
-													<br />
+													<br>
 													각정 건의 및 질의 등을 위한
-													<br />
+													<br>
 													청구입니다.
 												</p>
 											</div>
 										</div>
 										<div class="menu-list">
 											<ul>
-												<li><a href="#">시정일반 건의 · 질의</a></li>
-												<li><a href="#">코로나19방역수칙 위반 신고</a></li>
-												<li><a href="#">코로나19백신접종 신고</a></li>
-												<li><a href="#">시장에게 바란다</a></li>
-												<li><a href="#">서울시 비리신고</a></li>
-											</ul>
-											<ul>
-												<li><a href="#">투자출연기관비리신고</a></li>
-												<li><a href="#">하도급 부조리 신고</a></li>
-												<li><a href="#">인권침해 구제신청</a></li>
-												<li><a href="#">민생침해신고(눈물그만)</a></li>
-												<li><a href="#">노동조사신고</a></li>
-											</ul>
-											<ul>
-												<li><a href="#">지방세 이의신청</a></li>
-												<li><a href="#">성평등 노동조사신고</a></li>
-												<li class="list-icon-img">
-													<a href="#">
-														공직비리 익명신고
-														<img src="./images/ico_textlink.png" alt="공적비리 익명신고" />
-													</a>
-												</li>
+												<li><a href="#">민원편람</a></li>
+												<li><a href="#">무인민원발급기 위치</a></li>
+												<li><a href="#">위원회 협의 내용 조회</a></li>
+												<li><a href="#">행정서비스 헌장</a></li>
+												<li><a href="#">응답소 민원 통계</a></li>
 											</ul>
 										</div>
 									</div>
@@ -257,37 +181,23 @@
 												<!-- 제목 태그 제공이 부적절하면 오히려 문서 탐색에 혼란을 줌 -->
 												<p>
 													생활 속 불편사항 신고,
-													<br />
+													<br>
 													각정 건의 및 질의 등을 위한
-													<br />
+													<br>
 													청구입니다.
 												</p>
 											</div>
 										</div>
 										<div class="menu-list">
 											<ul>
-												<li><a href="#">시정일반 건의 · 질의</a></li>
-												<li><a href="#">코로나19방역수칙 위반 신고</a></li>
-												<li><a href="#">코로나19백신접종 신고</a></li>
-												<li><a href="#">시장에게 바란다</a></li>
-												<li><a href="#">서울시 비리신고</a></li>
+												<li><a href="#">공지사항</a></li>
+												<li><a href="#">SNS 긴급메시지</a></li>
+												<li><a href="#">자주 묻는 질문</a></li>
+												<li><a href="#">찾아가는 서울시청</a></li>
+												<li><a href="#">민원안내관</a></li>
 											</ul>
 											<ul>
-												<li><a href="#">투자출연기관비리신고</a></li>
-												<li><a href="#">하도급 부조리 신고</a></li>
-												<li><a href="#">인권침해 구제신청</a></li>
-												<li><a href="#">민생침해신고(눈물그만)</a></li>
-												<li><a href="#">노동조사신고</a></li>
-											</ul>
-											<ul>
-												<li><a href="#">지방세 이의신청</a></li>
-												<li><a href="#">성평등 노동조사신고</a></li>
-												<li class="list-icon-img">
-													<a href="#">
-														공직비리 익명신고
-														<img src="./images/ico_textlink.png" alt="공적비리 익명신고" />
-													</a>
-												</li>
+												<li><a href="#">응답소란</a></li>
 											</ul>
 										</div>
 									</div>
@@ -320,16 +230,16 @@
 				</div>
 			</div>
 
-			<!-- s:contants -->
+			<!-- s:컨텐츠 내용 시작 -->
 			<div class="contants ">
 				<div class="cont-comm" id="cont-comm">
 					<div class="cont-wrap">
 						<div class="cont-area">
-							<h2> 서울 <span>시민의 소리</span> <br /> 다 <i>&#45;</i> 듣겠습니다</h2>
+							<h2> 서울 <span>시민의 소리</span> <br> 다 <i>&#45;</i> 듣겠습니다</h2>
 						</div>
 						<div class="cont-txt">
 							<p class="txt1">서울시 불편사항 응답소에 애기해주세요</p>
-							<p class="txt2">생활 속 불편사항신고, 각종 건의 및 질의 등을 위한 <br /> 소통 창구 서울시 응답소입니다.</p>
+							<p class="txt2">생활 속 불편사항신고, 각종 건의 및 질의 등을 위한 <br> 소통 창구 서울시 응답소입니다.</p>
 						</div>
 					</div>
 					<div class="cont-wrap1">
@@ -364,9 +274,28 @@
 					</div>
 				</div>
 			</div>
-			<!-- e:contants -->
+			<!-- e:컨텐츠 내용 끝 -->
 		</div>
 	</header>
+
+	<!-- <script>
+		// 메뉴 호버 이벤트
+		$(".gnb-wrap .gnb ul li").on('mouseover', function(){
+			$(".all-menu").removeClass('on')
+			$(this).children(".all-menu").addClass("on")
+			$(this).addClass("on")
+		});
+		$(".gnb-wrap .gnb").on('mouseleave', function(){
+			$(".all-menu").removeClass('on')
+			$(".gnb-wrap .gnb ul>li").removeClass('on')
+		});
+
+		//tab 접근성
+		$(".gnb > ul > li> a").on("focus", function () {
+			$(this).next(".all-menu").addClass("on");
+		}); 
+	</script> -->
+
 </body>
 
 </html>
